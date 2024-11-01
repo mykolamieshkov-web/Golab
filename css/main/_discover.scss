@@ -1,0 +1,35 @@
+.discover {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    row-gap: 100px;
+    margin-top: $margin-y;
+    // .discover__content
+
+    &__content {
+        height: auto;
+    }
+
+    // .discover__image--content
+
+    &__image--content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 760px;
+        height: 469px;
+        @include tablet {
+            width: calc(760px / 1.618px);
+        }
+        @include mobile {
+            width: 98vw;
+            padding: 4px;
+        }
+        img {
+            flex-shrink: 0;
+        }
+    }
+}

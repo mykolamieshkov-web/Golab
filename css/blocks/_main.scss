@@ -1,0 +1,60 @@
+main.main {
+    width: 100%;
+    height: auto;
+
+}
+// styles for corusel: 
+.carousel {
+    overflow: hidden; /* Скрываем все, что выходит за границы карусели */
+    width: 98vw;/* Ширина карусели */
+    position: relative;
+      margin: 80px 0 80px 0;
+      padding: 8px 12px;
+      /* Относительное позиционирование для анимации */
+}
+.corusel-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 40px;
+   
+   
+    @include tablet {
+        height: min-content;
+       
+    }
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 12s linear infinite; /* Анимация движения */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Элементы не растягиваются */
+    width: 200px; /* Ширина элементов карусели */
+    margin: 0 10px; /* Отступы между элементами */
+}
+
+.carousel img {
+    width: 100%; /* Полная ширина для изображения */
+    height: auto; /* Автоматическая высота */
+}
+
+/* Анимация */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Двигаем на 100% влево */
+    }
+}
+
+/* Зацикливание */
+.carousel-track::after {
+    content: '';
+    display: inline-block; /* Это позволяет создать зацикливание */
+    width: 100%; /* Заполняем оставшееся пространство */
+}

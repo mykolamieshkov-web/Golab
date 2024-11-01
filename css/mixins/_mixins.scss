@@ -1,0 +1,58 @@
+// пример миксина под резиновый текст:
+@mixin cta {
+  max-width: 132px;
+  min-height: 36px;
+  padding: 10px 32px;
+  text-align: center;
+  color: var(--white)!important;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 280ms ease;
+  text-wrap: nowrap;
+  @include hover {
+    background-color: var(--hover);
+  }
+}
+
+
+@mixin visually-hidden {
+ position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+@mixin white-btn {
+  max-width: 232px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* Внутренние отступы для кнопки */
+  font-size: 16px; /* Размер текста */
+  font-weight: bold;
+  color: #000000; /* Цвет текста */
+  background-color: #ffffff; /* Цвет фона кнопки */
+  border: 2px solid #000000; /* Черная граница */
+  border-radius: 30px; /* Скругление краев */
+  cursor: pointer;
+  outline: none;
+  transition: all 200ms ease;
+
+
+  @include hover {
+    background-color: #22D496;
+  }
+  
+
+}

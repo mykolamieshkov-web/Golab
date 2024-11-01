@@ -1,0 +1,29 @@
+.testimonals {
+    margin-top: $margin-y;
+    width: 100%;
+    height: 557px;
+    margin-bottom: 80px;
+
+    // .testimonals__content
+
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .testimonals__screenshot
+
+    &__screenshot {
+        width: 895px;
+        height: 557px;
+        @include tablet {
+            width: 98vw;
+            padding-inline: 4px;
+            height: calc(557px / 1.618);
+        }
+    }
+}
+.header-title {
+    height: min-content!important;
+}
+
